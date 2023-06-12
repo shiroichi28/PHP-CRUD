@@ -12,7 +12,8 @@ try {
         PDO::ATTR_EMULATE_PREPARES => false,
         PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
         PDO::MYSQL_ATTR_FOUND_ROWS => true,
-        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci",
+        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4 COLLATE     
+        utf8mb4_unicode_ci",
         PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false
     ];
 
