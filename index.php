@@ -14,16 +14,22 @@ session_start();
 
 <body>
     <div class="container">
-        <button class="btn-primary btn"><a href="ae.php">Add</a>
-        </button>
-        <div class="table-responsive">
-            <table class="table table-bordered">
+        <div class="row mt-5">
+            <a href="ae.php"><button class="btn-primary btn ">Add</button></a>
+                <table class="table table-bordered mt-3">
+                    <thead>
+                        <th>S.no</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Actions</th>
+                    </thead>
+                </table>
+            </div>
 
-            </table>
-        </div>
 
     </div>
-    <script src="/assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
