@@ -125,16 +125,16 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div class="mb-3 input-group">
                                 <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
-                                <input type="text" name="email" id="email" class="form-control" placeholder="Email" required value="<?= isset($_GET['id']) ? esc($row['email']) : '' ?>">
+                                <input type="text" name="email" id="email" class="form-control" placeholder="Email" required value="<?= isset($_GET['id']) ? esc($row['email']) : '' ?>" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
                             </div>
                             <div class="mb-3 input-group">
                                 <span class="input-group-text"><i class="fa-solid fa-mobile-retro"></i></span>
-                                <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Mobile" value="<?= isset($_GET['id']) ? esc($row['mobile']) : '' ?>" required>
+                                <input type="tel" name="mobile" id="mobile" class="form-control" placeholder="Mobile" value="<?= isset($_GET['id']) ? esc($row['mobile']) : '' ?>" required pattern="^[6-9]\d{9}$" maxlength="10">
                             </div>
                             <?php if (!isset($id)) : ?>
                                 <div class="mb-3 input-group">
                                     <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autocomplete="new-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" title="At least 8 characters, with at least one uppercase letter, one lowercase letter, and one digit">
                                     <span class="input-group-text toggle-password"><i class="fa-solid fa-eye"></i></span>
                                 </div>
                             <?php endif ?>
