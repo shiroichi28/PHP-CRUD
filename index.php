@@ -1,5 +1,4 @@
 <?php
-
 include('./includes/db.php');
 session_start();
 ?>
@@ -29,7 +28,7 @@ session_start();
                 <tbody>
                     <?php $stmt = $pdo->query("SELECT * FROM profile ");
                     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); ?>
-                    <?= empty($rows) ? '<tr ><td colspan="6">No data</td></tr>' : "" ?>
+                    <?= empty($rows) ? '<tr ><td colspan="6" class="text-center text-bold">No data</td></tr>' : "" ?>
                     <?php foreach ($rows as $i => $row) : ?>
                         <tr>
                             <td><?= $i + 1 ?></td>
