@@ -6,15 +6,15 @@ AJAX Modal CRUD is a technique that allows for creating, reading, updating, and 
 
 ## Tech Stack
 
-**Client:** HTML, BootStrap 5
+- **Client:** HTML, BootStrap 5
 
-**Server:** PHP
+- **Server:** PHP
 
-**Database:** MySQL
+- **Database:** MySQL
 
-**Functionalities:** Jquery,AJAX
+- **Functionalities:** Jquery,AJAX
 
-**Tools:** XAMPP, VSCode
+- **Tools:** XAMPP, VSCode
 
 
 
