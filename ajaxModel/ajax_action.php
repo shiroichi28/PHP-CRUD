@@ -18,6 +18,7 @@ if ($action === 'fetch') {
     $id = $_POST['id'];
     deleteExpense($id);
 }
+//Functions
 function fetchExpenses()
 {
     global $pdo;
