@@ -41,6 +41,7 @@ function fetchExpenses()
 
     echo $output;
 }
+//Add Functions ,Increase Parameter Equals to Input
 function addExpense($description, $amount) {
   global $pdo;
   $query = $pdo->prepare("INSERT INTO crud (item, price) VALUES (?, ?)");
