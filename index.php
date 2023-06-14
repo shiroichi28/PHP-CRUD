@@ -11,6 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css' integrity='sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg==' crossorigin='anonymous' />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -18,13 +19,15 @@ session_start();
     <div class="container">
         <div class="row mt-5">
             <a href="ae.php"><button class="btn-primary btn ">Add</button></a>
-            <table class="table table-bordered mt-3">
+            <table class="table table-bordered mt-5" id="myTable">
                 <thead>
                     <th>S.no</th>
                     <th>Username</th>
                     <th>Email</th>
                     <th>Mobile</th>
-                    <th colspan="2">Actions</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+
                 </thead>
                 <tbody>
                     <?php $stmt = $pdo->query("SELECT * FROM profile ");
@@ -47,7 +50,14 @@ session_start();
 
 
     </div>
-    <script src="./assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $('#myTable').DataTable();
+        });
+    </script>
 </body>
 
 </html>
